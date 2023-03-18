@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, TextInput } from "react-native";
 
 
 
@@ -13,8 +13,16 @@ export default App = () => {
                 />
                 <View>
                     <Text style={styles.info}>Let’s get you started</Text>
+                    <Text style={styles.create} >Create an Account</Text>
+
+                    <TextInput style={styles.input}
+                        placeholder={"Username"} />
+
+
                 </View>
+
             </View>
+
         </ScrollView>
     );
 }
@@ -40,5 +48,20 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: '#263238',
         fontFamily: 'Inter-Medium',
+    },
+    create: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+    },
+    input: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+        color: '#263238',
+        borderColor: '#263238',
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: '10%',
+        paddingHorizontal: 16
     }
+
 })
