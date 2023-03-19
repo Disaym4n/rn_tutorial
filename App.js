@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView, TextInput } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, TextInput, Button, TouchableOpacity } from "react-native";
 
 
 
@@ -18,6 +18,18 @@ export default App = () => {
                     <TextInput style={styles.input}
                         placeholder={"Username"} />
 
+                    <TextInput style={styles.digit}
+                        placeholder={"Phone number"} />
+
+                    <TextInput style={styles.email}
+                        placeholder={"Email Address"} />
+
+                    <TextInput style={styles.question}
+                        placeholder={"What industry does your business operate in?"} />
+
+                    <TouchableOpacity style={styles.button} >
+                        <Text style={styles.button_text}>Continue</Text>
+                    </TouchableOpacity>
 
                 </View>
 
@@ -61,7 +73,55 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         marginTop: '10%',
-        paddingHorizontal: 16
-    }
-
+        paddingHorizontal: 16,
+    },
+    digit: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+        color: '#263238',
+        borderColor: '#263238',
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: '10%',
+        paddingHorizontal: 16,
+    },
+    email: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+        color: '#263238',
+        borderColor: '#263238',
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: '10%',
+        paddingHorizontal: 16,
+    },
+    question: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+        color: '#263238',
+        borderColor: '#263238',
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: '10%',
+        paddingHorizontal: 16,
+    },
+    button: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+        color: '#FFCC49',
+        borderColor: '#FFCC49',
+        backgroundColor: '#FFCC49',
+        borderWidth: 1,
+        borderRadius: 10,
+        marginTop: '10%',
+        paddingHorizontal: 16,
+    },
+    button_text: {
+        fontSize: 12,
+        fontFamily: 'Inter-Regular',
+        color: '#FFCC49',
+        textAlign: 'center',
+        color: '#263238',
+        fontFamily: 'Inter-Medium'
+    },
 })
