@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, ScrollView, TextInput, TouchableOpacity } from "react-native";
 
 
 
 export default App = () => {
+    const [userName, setUserName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    console.log('username: ', userName)
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
             <View style={styles.container}>
@@ -16,9 +19,14 @@ export default App = () => {
                     <Text style={styles.create} >Create an Account</Text>
 
                     <TextInput style={styles.input}
+                        value={userName}
+                        onChangeText={(text) => setUserName(text)}
                         placeholder={"Username"} />
 
                     <TextInput style={styles.digit}
+                        value={phoneNumber}
+                        onChangeText={(text) => setPhoneNumber(text)}
+                        inputMode={"numeric"}
                         placeholder={"Phone number"} />
 
                     <TextInput style={styles.email}
@@ -31,7 +39,7 @@ export default App = () => {
                         <Text style={styles.button_text}>Continue</Text>
                     </TouchableOpacity>
                     <Text style={styles.confirm_account} >Already have an account?
-                    <Text style={styles.login_text}> Login</Text>
+                        <Text style={styles.login_text}> Login</Text>
                     </Text>
                 </View>
 
