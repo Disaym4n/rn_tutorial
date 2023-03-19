@@ -31,6 +31,7 @@ export default App = () => {
                         <Text style={styles.button_text}>Continue</Text>
                     </TouchableOpacity>
                     <Text style={styles.confirm_account} >Already have an account?
+                    <Text style={styles.login_text}> Login</Text>
                     </Text>
                 </View>
 
