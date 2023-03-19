@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, ScrollView, TextInput, Button, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, TextInput, TouchableOpacity } from "react-native";
 
 
 
@@ -30,7 +30,8 @@ export default App = () => {
                     <TouchableOpacity style={styles.button} >
                         <Text style={styles.button_text}>Continue</Text>
                     </TouchableOpacity>
-
+                    <Text style={styles.confirm_account} >Already have an account?
+                    </Text>
                 </View>
 
             </View>
@@ -115,13 +116,28 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginTop: '10%',
         paddingHorizontal: 16,
+        height: 50
     },
     button_text: {
         fontSize: 12,
         fontFamily: 'Inter-Regular',
         color: '#FFCC49',
-        textAlign: 'center',
         color: '#263238',
-        fontFamily: 'Inter-Medium'
+        fontFamily: 'Inter-Medium',
+        textAlign: 'center',
+        paddingTop: 16
     },
+    confirm_account: {
+        fontSize: 12,
+        color: '#1C1C1C',
+        fontFamily: 'Inter-Medium',
+        textAlign: 'center',
+        marginTop: '5%'
+    },
+    login_text: {
+        fontSize: 12,
+        color: '#FFCC49',
+        fontFamily: 'Inter-Medium',
+    },
+
 })
