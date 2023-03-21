@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Image, ScrollView, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, TextInput, TouchableOpacity, Alert } from "react-native";
 
 
 
@@ -47,7 +47,8 @@ export default App = () => {
                          />
 
                     <TouchableOpacity style={styles.button} >
-                        <Text style={styles.button_text}>Continue</Text>
+                        <Text style={styles.button_text}
+                        onPress={Alert.alert("continue")} >Continue</Text>
                     </TouchableOpacity>
                     <Text style={styles.confirm_account} >Already have an account?
                         <Text style={styles.login_text}> Login</Text>
