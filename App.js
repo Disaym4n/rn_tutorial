@@ -33,22 +33,23 @@ export default App = () => {
                         placeholder={"Phone number"} />
 
                     <TextInput style={styles.email}
-                    value={emailAddress}
+                        value={emailAddress}
                         placeholder={"Email Address"}
                         onChangeText={(text) => setEmailAddress(text)}
                         inputMode={"numeric"}
-                         />
+                    />
 
                     <TextInput style={styles.question}
                         placeholder={"What industry does your business operate in?"}
                         onChangeText={(text) => setQuestion(text)}
                         inputMode={"text"}
                         value={question}
-                         />
+                    />
 
                     <TouchableOpacity style={styles.button} >
                         <Text style={styles.button_text}
-                        onPress={Alert.alert("continue")} >Continue</Text>
+                        onPress={Alert.alert("Login in!")}
+                        >Continue</Text>
                     </TouchableOpacity>
                     <Text style={styles.confirm_account} >Already have an account?
                         <Text style={styles.login_text}> Login</Text>
