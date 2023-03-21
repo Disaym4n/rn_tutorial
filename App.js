@@ -162,4 +162,5 @@ const styles = StyleSheet.create({
         fontFamily: 'Inter-Medium',
     },
 
+
 })
