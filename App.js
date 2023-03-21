@@ -6,6 +6,8 @@ import { View, Text, StyleSheet, Image, ScrollView, TextInput, TouchableOpacity 
 export default App = () => {
     const [userName, setUserName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [emailAddress, setEmailAddress] = useState('');
+    const [question, setQuestion] = useState('');
     console.log('username: ', userName)
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -21,7 +23,8 @@ export default App = () => {
                     <TextInput style={styles.input}
                         value={userName}
                         onChangeText={(text) => setUserName(text)}
-                        placeholder={"Username"} />
+                        placeholder={"Username"}
+                        inputMode={"text"} />
 
                     <TextInput style={styles.digit}
                         value={phoneNumber}
@@ -30,10 +33,18 @@ export default App = () => {
                         placeholder={"Phone number"} />
 
                     <TextInput style={styles.email}
-                        placeholder={"Email Address"} />
+                    value={emailAddress}
+                        placeholder={"Email Address"}
+                        onChangeText={(text) => setEmailAddress(text)}
+                        inputMode={"numeric"}
+                         />
 
                     <TextInput style={styles.question}
-                        placeholder={"What industry does your business operate in?"} />
+                        placeholder={"What industry does your business operate in?"}
+                        onChangeText={(text) => setQuestion(text)}
+                        inputMode={"text"}
+                        value={question}
+                         />
 
                     <TouchableOpacity style={styles.button} >
                         <Text style={styles.button_text}>Continue</Text>
